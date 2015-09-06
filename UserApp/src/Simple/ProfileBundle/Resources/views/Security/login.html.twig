@@ -1,0 +1,73 @@
+{# empty Twig template }
+
+{% if error %}
+    <div>{{ error.message }}</div>
+{% endif %}
+
+<form action="{{ path('login_check') }}" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="_username" value="{{ last_username }}" />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="_password" />
+
+    <input type="hidden" name="_target_path" value="user_edit" />
+
+    <button type="submit">login</button>
+</form>#}
+    
+{% extends '::base.html.twig' %}
+
+{% block stylesheets%}
+    <style>       
+        .container {
+            width: 40%;
+            margin-top: 100px;
+        }        
+    </style>
+{% endblock %}
+    
+
+{% block body %}           
+    <div class="container well">        
+        <form class="form-horizontal" action="{{ path('login_check') }}" method="post">
+            <fieldset>
+                <legend><h2>Login</h2></legend>
+                
+                {% if error %}
+                    <div class="alert alert-error fade in">
+                        <button class="close" data-dismiss="alert" type="button">×</button>
+                        <strong>Error</strong>
+                        {{ error.message }}
+                    </div>
+                {% endif %}
+                
+                <div class="control-group">
+                    <label class="control-label" for="inputEmail">Email</label>
+                    <div class="controls">
+                        <input type="text" id="inputEmail" placeholder="Email" name="_username" value="{{ last_username}}"/>
+                    </div>
+                </div>     
+
+                <div class="control-group">
+                    <label class="control-label" for="inputPassword">Password</label>
+                    <div class="controls">
+                        <input type="password" id="inputPassword" placeholder="Password" name="_password"/>
+                    </div>
+                </div> 
+
+                <input type="hidden" name="_target_path" value="user_edit" />
+                
+                <div class="control-group">
+                    <div class="controls">
+                        <a href="{{ path('register') }}">Register</a>
+                    </div>                        
+                </div>
+                
+                <div class="form-actions">
+                    <button class="btn btn-primary" type="submit">Sign in</button>
+                </div>                     
+            </fieldset>        
+        </form>       
+    </div>
+{% endblock %}    

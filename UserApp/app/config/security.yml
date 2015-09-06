@@ -1,0 +1,23 @@
+security:
+    encoders:
+        Simple\ProfileBundle\Entity\User: sha1
+
+    providers:
+        main:
+            entity:
+                class: Simple\ProfileBundle\Entity\User
+                property: email
+
+    firewalls:
+        secured_area:
+            pattern:    ^/
+            form_login:
+                check_path: login_check
+                login_path: login
+            logout:
+                path:   /logout
+                target: /login
+            anonymous: ~
+
+    access_control:
+           - { path: ^/user, roles: ROLE_USER }

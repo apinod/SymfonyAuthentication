@@ -1,0 +1,22 @@
+simple_profile:
+    resource: "@SimpleProfileBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+cities:
+    pattern: /cities
+    defaults: {_controller: SimpleProfileBundle:User:searchCities }   
+    
+register:
+    pattern: /register
+    defaults: {_controller: SimpleProfileBundle:Security:register }    
+    
+login:
+    pattern:   /login
+    defaults:  { _controller: SimpleProfileBundle:Security:login }
+    
+login_check:
+    pattern:   /login_check
+    
+logout:
+    path:     /logout    

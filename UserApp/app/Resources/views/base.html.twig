@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Users Project!{% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link href="{{ asset('assets/jquery/css/base/jquery-ui.css') }}" rel="stylesheet">        
+        <link href="{{ asset('assets/bootstrap/css/bootstrap.css') }}" rel="stylesheet">              
+        {% block stylesheets %}{% endblock %}        
+    </head>
+    <body class="preview">       
+        {% block body %}{% endblock %}
+            
+        <script src="{{ asset('assets/jquery/js/jquery-1.9.1.min.js') }}"></script>
+        <script src="{{ asset('assets/jquery/js/jquery-ui-1.10.2.min.js') }}"></script>
+        <script src="{{ asset('assets/jquery/js/jquery-validate.min.js') }}"></script>                
+        <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js')}}"></script>                     
+        
+        {% block javascripts %}{% endblock %}        
+    </body>
+</html>

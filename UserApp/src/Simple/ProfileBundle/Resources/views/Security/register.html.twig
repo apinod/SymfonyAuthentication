@@ -1,0 +1,198 @@
+{% extends 'SimpleProfileBundle::layout.html.twig' %}
+
+{% block contents %}
+<div id="container" class="container">
+    <form class="form-horizontal well" action="{{ path('user_create') }}" method="post" {{ form_enctype(form) }}>
+        <fieldset>
+            <legend><h2>Register User</h2></legend>                                                                         
+            
+            <div class="row-fluid">
+                <div class="span6">                
+                    <div class="control-group">
+                        {% if form_errors(form.firstName)%}
+                            <div class="alert alert-error fade in">
+                                <button class="close" data-dismiss="alert" type="button">×</button>
+                                <strong>Error</strong>
+                                {{ form_errors(form.firstName) }}
+                            </div>                             
+                        {% endif %}
+                            
+                        {{ form_label(form.firstName, null, {'label_attr' : {'class' : 'control-label'} })}}
+                        <div class="controls">{{ form_widget(form.firstName) }}</div>
+                    </div>   
+
+                    <div class="control-group">  
+                        {% if form_errors(form.lastName)%}
+                            <div class="alert alert-error fade in">
+                                <button class="close" data-dismiss="alert" type="button">×</button>
+                                <strong>Error</strong>
+                                {{ form_errors(form.lastName) }}
+                            </div>                             
+                        {% endif %}                        
+                        
+                        {{ form_label(form.lastName, null, {'label_attr' : {'class' : 'control-label'} })}}
+                        <div class="controls">{{ form_widget(form.lastName) }}</div>                
+                    </div>  
+
+                    <div class="control-group">  
+                        {% if form_errors(form.address)%}
+                            <div class="alert alert-error fade in">
+                                <button class="close" data-dismiss="alert" type="button">×</button>
+                                <strong>Error</strong>
+                                {{ form_errors(form.address) }}
+                            </div>                             
+                        {% endif %}                          
+                        {{ form_label(form.address, null, {'label_attr' : {'class' : 'control-label'} })}}
+                        <div class="controls">{{ form_widget(form.address) }}</div>                
+                    </div>  
+                    
+                    <div>
+                        <div class="control-group">                         
+                            <label class="control-label" for="state">State</label>
+                            <div class="controls"> 
+                                <select id="state">
+                                    {% for s in states %}                                   
+                                         <option value="{{s.id}}">{{s.name}}</option>  
+                                    {% endfor %}                        
+                                </select>
+                            </div>   
+                        </div>  
+
+                        <div id="ajax-waiting-loader" class="hide control-group" style="z-index: 1000000;"> 
+                            <div class="row offset1">              
+                                <p style="color: #000000;"><img src="{{ asset('assets/img/wait.gif')}}"><strong>&nbsp;Cargando ciudades....</strong></p>
+                            </div>
+                        </div>                              
+                            
+                        <div id="divCity"  class="control-group"> 
+                            <label class="control-label" for="lstCities">City</label>
+                            <div class="controls">                        
+                                <select id="lstCities" size=5>
+                                    {% for c in cities %}                                   
+                                         <option value="{{c.id}}">{{c.name}}</option>  
+                                    {% endfor %}                                      
+                                </select>
+                            </div>  
+                        </div>  
+                    </div>                            
+                </div>                
+
+                <div class="span6">  
+                    
+                    <div class="control-group">                        
+                        {% if form_errors(form.zipCode)%}
+                            <div class="alert alert-error fade in">
+                                <button class="close" data-dismiss="alert" type="button">×</button>
+                                <strong>Error</strong>
+                                {{ form_errors(form.zipCode) }}
+                            </div>                             
+                        {% endif %}
+                        
+                        {{ form_label(form.zipCode, null, {'label_attr' : {'class' : 'control-label'} })}}
+                        <div class="controls">
+                            {{ form_widget(form.zipCode) }}
+                        </div>                
+                    </div> 
+                    
+                    <div class="control-group">   
+                        {% if form_errors(form.email)%}
+                            <div class="alert alert-error fade in">
+                                <button class="close" data-dismiss="alert" type="button">×</button>
+                                <strong>Error</strong>
+                                {{ form_errors(form.email) }}
+                            </div>                             
+                        {% endif %}
+                            
+                        {{ form_label(form.email, null, {'label_attr' : {'class' : 'control-label'} })}}
+                        <div class="controls">{{ form_widget(form.email) }}</div>                
+                    </div>                  
+                    
+                    {% for passwordField in form.password %}
+                        <div class="control-group"> 
+                            
+                            {% if form_errors(passwordField)%}
+                                <div class="alert alert-error fade in">
+                                    <button class="close" data-dismiss="alert" type="button">×</button>
+                                    <strong>Error</strong>
+                                    {{ form_errors(passwordField) }}
+                                </div>                             
+                            {% endif %}                            
+                            
+                            {{ form_label(passwordField, null, { 'label_attr': {'class': 'control-label'} }) }}
+                            <div class="controls">{{ form_widget(passwordField) }}</div>
+                        </div>
+                    {% endfor %}                         
+                                            
+                    <input type="hidden" id="hdCity" name="city"/>                    
+                    
+                    {{form_rest(form)}}             
+                </div>                   
+            </div>     
+            
+            <div class="form-actions">
+                <button class="btn btn-primary" type="submit">Register</button>
+            </div> 
+        </fieldset>            
+    </form>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript">
+
+var $city = $('form #hdCity');
+var $listCities = $('#lstCities');
+var $listStates = $('#state');
+
+$(function(){
+       
+    $listCities.find("option:first").attr('selected','selected');
+    $city.val($listCities.val());
+    
+    $listCities.change(function(){
+        $city.val($listCities.val());
+    });   
+    
+    $listStates.change(function(){     
+        $("#divCity").hide();
+        $("#ajax-waiting-loader").show();  
+        $('form button').attr('disabled', '');
+                  
+        //$('#errorBox').hide(); 
+        $url = "{{path('cities')}}";
+        $.ajax({ url: $url,
+                type: 'POST',
+                data: "state=" + $listStates.val(),
+                async: false
+        })
+        .done(function(html){            
+            /* if (html=="")
+             {
+                 //$('form button').attr('disabled', '');
+                  alert(html);                  
+                  //location.href="{#{ path('_login') }#}";
+             }
+             else
+             {
+                  alert("ERROR"); 
+                  //$('#errorBox').show();                  
+             }*/
+            $listCities.html(html);
+            $listCities.find("option:first").attr('selected','selected');            
+            $city.val($listCities.val());             
+        })
+        .fail(function(error){
+             alert(error);
+        });        
+        $("#ajax-waiting-loader").hide(); 
+        $("#divCity").show();   
+        $('form button').removeAttr('disabled');
+    }); 
+    
+    var $otra_cosa = $city.val();
+    var $otra_cosaM = 8;
+    
+});
+
+</script>
+{% endblock %}            

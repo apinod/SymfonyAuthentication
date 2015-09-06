@@ -1,0 +1,51 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets%}
+    <style>
+        .navbar-inverse .nav > li > a {
+            color: #999999;
+        }
+        .navbar-inverse .divider-vertical {
+            border-left-color: #888888;
+            border-right-color: #999999;
+        }
+        
+        .navbar-inverse .navbar-text {
+            color: #ffffff;
+        }        
+    </style>
+{% endblock %}
+    
+{% block body %}
+
+        <div class="container" style="width: 100%">
+            <div class="navbar navbar-inverse">                                    
+                <div class="navbar-inner">
+                    <div class="container">
+                        <li class="brand pull-left">User Administration Panel</li>                      
+                        <div class="nav-collapse collapse navbar-inverse-collapse">                    
+                            <ul class="nav pull-right">
+                                <li>
+                                    <p class="navbar-text">{% block username%} Wellcome {% endblock %}</p>                                
+                                </li>
+                                <li class="divider-vertical"></li>                                
+                                <li>
+                                    <a class="" href="{{ path('logout')}}">Logout</a>
+                                </li>                          
+                            </ul>
+                        </div>           
+                    </div>                        
+                </div>
+            </div>
+                
+            {% block contents %}
+            {%endblock%}
+        </div>
+    
+        <hr class="hr_div">
+        <footer class="footer">
+            <div class="container" style="margin-left: 40%">
+                <p>Symfony2  © 2014</p>            
+            </div>            
+        </footer>    
+{% endblock %}

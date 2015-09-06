@@ -1,0 +1,596 @@
+body {
+	background-color: #fff;
+	color: #333333;
+	margin: 0 auto 20px auto;
+	background-image: url(/imagenes/back.gif);
+	background-repeat: repeat-y;
+	background-position: center;
+}
+table#plantilla { border: 0px;border-spacing: 0px;border-collapse: collapse;margin: 0px auto; padding: 0; width:760px;}
+table, blockquote { font-family: Arial;	font-size: 12px; }
+td.ctr{padding-top: 10px;}
+p, blockquote, ul, ol, li{padding-left: 0.5em; word-wrap: break-word;/*sobre todo para IE*/}
+ul, ol {margin: 0 1.1em;padding: 0px; width:auto;}
+li {list-style-position: inside;text-indent:0!important;text-indent:0}
+img {border: 0px;}
+hr {height: 1px;color: #cccccc;}
+h2 {font-size: 18px;}
+a{text-indent: 0;}
+#cabezal {margin: 0px auto;	padding: 0px; width: 770px;	border: 0px;}
+#fecha {color: #000000;}
+#blog {	padding: 0px;margin: 0 2px;}
+#blog li { /*overflow: hidden;*/clear: both; margin: 0px; padding: 0 0 5px 0; list-style: none; border-bottom: 1px solid #C0C0C0; text-indent: 0px; _text-indent:-15px; #text-indent:-15px;}
+#logo {padding: 0 0 0 16px;} 
+#aldia {margin: 0;padding: 0;}
+div#posttitle{color:#444;font-size: 14px;padding: 8px 0px 3px 0px;}
+/* para ver los post en pag de seg nivel*/
+table#verBlog {
+   background-color: transparent;
+   border: 0px;
+   border-spacing: 0px;
+   border-collapse: collapse;
+   margin: 1% auto 0px auto;
+   width:770px;
+   border-bottom: 1px solid #C0C0C0;
+}
+#verBlog .postcontent p {padding: 10px 0px;}
+.content img,.postcontent img,#cajaunPost img,#listcontent img  { margin: 5px 5px 0px 0px;padding:1px;border: 1px solid #ccc}
+div.masrss { margin-right:5px;margin-top:5px;text-align:right;}
+div.masrss img{ border: 0px;padding-right:5px;}
+div.masrss a:hover{ text-decoration: none;}
+.alignleft { float: left;#float: left;}
+.alignright { float: right;#float: right}
+#postfechaautor, #listfechaautor{ font-size:9px;font-family: Verdana; color:#666;padding: 0px;}
+.content, .contentsintitulo {/*overflow: auto*/width:auto;clear: both;font-family: Arial;font-size: 12px;/*visto con Pablo*/line-height: 1.45em;/*visto con Pablo*/padding:1em;_padding:0.3em;#padding:0.3em;}
+.contentrss, .listlinklist { overflow: hidden;clear: both;font-family: Arial;font-size: 11px;padding: 5px;position:relative;line-height: 1.45em;} 
+.contentsintitulo ul,.contentrss ul,.listlinklist ul,.contentrss .postcontent ul,.contentrss .enlaceslink ul{ padding: 0px; margin: 0px 3px; text-indent:0!important;text-indent:-15px;}
+.contentsintitulo li,.contentrss li,.listlinklist li,.contentrss .postcontent li,.contentrss .enlaceslink li{ font-family: Arial;font-size: 11px;padding: 5px 0px;margin: 0px;list-style: none;border-bottom: 1px solid #C0C0C0;	text-indent:0!important;text-indent:0;}
+/*.contentsintitulo,*/ 
+.cont { padding: 0px 5px;}
+/*usada en las cajitas se borrar cndo todos usen columna1*/
+#cinta { margin:0px;padding-left:10px;height: 20px;}
+#cajaunPost a, .postcontent a { color: #16387C;font-family: Arial;font-size: 12px;list-style: none; font-weight: bold; text-decoration: none;}
+#cajaunPost a:hover, .postcontent a:hover { text-decoration: underline;}
+#cajaunPost ul li, .postcontent ul li, .postcontent li, ul.enlaceslink li { padding: 5px 0px;margin: 0px;list-style-position: inside;}
+#cajaunPost p, #cajaPost p,.postcontent p { margin: 0px;padding: 5px/*3px 0px*/;}
+.postdbu .postcontent ul p { padding: 0px;margin:  0px;}
+#cajaunPost { overflow:hidden;padding: 0 2%; width: 78%;}
+#cajaPost { background-color: #FFFFFF;border-bottom:1px solid #C0C0C0;border-left:1px solid #C0C0C0;border-right:1px solid #C0C0C0;
+padding:0 5px;width: 22%;}
+#cajaPost ul { padding: 0px 2%;margin:  0px; _padding: 0; #padding: 0;}
+#cajaPost li { padding: 5px 0px; margin:  0px; list-style: none; border-top: 1px solid #C0C0C0;
+}
+/* COLUMNA 2*/
+div#caja2 #blog li {border-bottom: none;}
+div#caja2 #listcontent a.enlacevermas{
+margin-top:-2%;
+margin-bottom:-5%;}
+div#caja2 #blog li{
+	border-bottom:none
+}
+/* COLUMNAS 3 */
+div#caja3 .columna3t, .columna3t {
+ 	background-color:#a9a9a9;
+ 	color:#fff;
+ 	font-family: Arial; 
+ 	font-size: 12px; 
+ 	font-weight: bold; 
+	height:20px;
+	line-height:20px;
+	overflow:hidden;
+	padding-left:10px;
+	text-align: left; 
+ }
+div#caja3 .columna3c, .columna3c { 
+	background-color:#F6F6F6;
+}
+.columna3c, .columna1c, .borde{ 
+	clear: both;
+}
+/* COLUMNAS 1 Y 3 */
+div#caja1 .columna1c .textsm, div#caja3 .columna3c .textsm{
+	border-bottom: 1px solid #c0c0c0;
+	font-family: Arial; 
+	font-size: 12px;
+	font-weight: bold; 
+	height:20px;
+	line-height:20px;
+	overflow:hidden; 
+	padding: 5px 0px 5px 5px;
+	margin:0 5px;
+}
+/*class*/
+.borde {
+	border-bottom: 1px #ccc solid;
+	padding-bottom:5px;
+	margin-bottom:10px;
+	text-align:left;
+}
+.border {
+	border-bottom: 1px #ccc solid;
+	padding-bottom:5px;
+	margin-bottom:10px;
+	text-align:left;
+}
+.caja {
+	margin: 0px; 
+	border: 1px #ccc solid;
+	font-family: Arial; 
+    padding: 5px;
+}
+.textbold {
+	font-family: Arial; 
+	font-size: 12px; 
+	color: #000000; 
+	font-weight:bold;
+	margin: 10px 0px 0px 0px;
+}
+.menu {
+	font-family: Arial; 
+	font-size: 12px; 
+	font-style: normal; 
+	font-weight: normal; 
+	font-variant: normal; 
+	color: #FFFFFF; 
+	text-decoration: none}
+.menu:hover {
+	background-color: #339933}
+.sidemenu { width: 181px;}
+.whiteboldsmall {
+	font-family: Verdana; 
+	font-size: 10px; 
+	font-weight: bold; 
+	color: #FFFFFF; 
+	text-decoration: none}
+.whitebold {
+	font-family: Arial; 
+	font-size: 12px; 
+	font-weight: bold; 
+	color: #FFFFFF; 
+	padding-left:10px;
+	line-height:20px;/* nuevo*/
+	text-decoration: none
+}
+.whitetext {
+	font-family: Arial; 
+	font-size: 12px; 
+	color: #ffffff;	
+	padding-left:10px;
+	line-height:20px;/* nuevo*/
+}
+.titletext {
+	font-family: Arial; 
+	font-size: 12px;	
+	background-color: white; 
+	color: #000000; 
+	padding:0px 10px 0px 10px; 
+}
+.greybold {
+	font-family: Arial; 
+	font-size: 12px; 
+	font-weight: bold; 
+	color: #6A6A6A; 
+	padding-left:10px;
+	line-height:20px;/* nuevo*/
+}
+.graytext {
+	font-family: Arial; 
+	font-size: 12px;
+	font-weight: bold;  
+	color: #5B5B5B;
+ 	padding-left:10px;
+ 	line-height:20px;
+ 	text-align: left;
+}
+.listgd{margin:0px;padding: 0px;}
+.serviciopost {	background-color:#D7D7D7;font-weight: bold;margin:0 -5px;padding:2px;}
+/*--------- COLORES -----------*/
+.textoamarillo {font-family: Arial; font-size: 12px;  color: #F1E400; font-weight:bold; padding-left:10px; padding-right:10px}
+.alert {font-family: Arial; color: #ff0000;}
+.contendicc {font-family: Arial; font-size: xx-small; font-style: normal; color: #333333}
+.textop {font-family: Arial; font-size: xx-small; font-style: normal; font-weight: bold; font-variant: normal; color: #000000; text-decoration: none}
+.textogastro {font-family: Arial; font-size:small; color: #910023;}
+.textorehab {font-family: Arial; font-size:small; color: #045F5E;}
+.small {font-family: Verdana; font-size: 10px; color: #333333;}
+.smallplus {font-family: Verdana; font-size: 8px; color:#333333;}
+.textonormal {font-family: Arial; font-size: 12px; color: #333333;}
+.textonormalbold {font-family: Arial; font-size: 12px; color: #333333; font-weight:bold}
+.textograndebold {font-family: Arial; font-size: 13px; color: #333333; font-weight:bold}
+.menubotlight {background-color: #AFE4AF; font-family: Arial; font-size: 12px; color: black; font-weight: bold; text-decoration:none;}
+.gastro { border-bottom: 1px #AD0101 solid; padding-right: 2px; padding-left: 2px;}
+.blanco {background-color: #FFFFFF;}
+.grist {background-color: #2C90AD;}
+.grisc {background-color: #E1E9E9;}
+.grisoscuro {background-color: #CDCDCD;}
+.grisclar {background-color: #dddddd;}
+.grisclaro {background-color: #F6F6F6;}
+.grislegislaciont {background-color: #4C4E67;}
+.grislegislacionc {background-color: #e3e2e8;}
+
+.verdepvidat {background-color: #8CE791 ;}
+.verdepvidac {background-color: #D8F7D9;}
+.verdetvt {background-color: #4DA900}
+.verdecitotvt {background-color: #CBE90F;}
+.verdecitotvc {background-color: #F1F5D9;}
+
+.complet {background-color: #B2BAE7;}
+.complec {background-color: #EEF0F9;}
+.apuat {background-color: #54858C;}
+.apuac {background-color: #E2ECEE;}
+.serviciost {background-color: #8870a8;}
+.serviciosc {background-color: #e8e3ee;}
+
+.soportet {background-color: #00a8ae;}
+.soportec {background-color: #cceeef;}
+.redt {background-color: #a3d87c;}
+.redc {background-color: #e4f4d8;}
+
+.negrot {background-color: #000000 ;}
+.negroc {background-color: #CCCCCC;}
+
+.naranjat {background-color: #FDAF17 ;}
+.naranjac {background-color: #FEE8B9;}
+
+.moradosidat {background-color: #956E8D;}
+.moradosidac {background-color: #F4EFF5;}
+.morado-orquideat {background-color: #A7308C;}
+.morado-orquideac {background-color: #FDE2F7;}
+
+.tabaq1t {background-color: #FE4243;}
+.tabaq1c {background-color: #FBDFDF;}
+.tabaq2t {background-color: #D1686C;}
+.tabaq2c {background-color: #EBDBDB;}
+.tabaq3t {background-color: #5AB349;}
+.tabaq3c {background-color: #E1FADC;}
+.tabaq4t {background-color: #FCB879;}
+.tabaq4c {background-color: #FEF0D3;}
+
+.renacip1t {background-color: #197A66;}
+.renacip1c {background-color: #E8F7F4;}
+.renacip2t {background-color: #A26C52;}
+.renacip2c {background-color: #EADDD5;}
+.renacip3t {background-color: #88B7AD;}
+.renacip3c {background-color: #E9F2F1;}
+
+.farmacia1t {background-color: #9ABE7E;}
+.farmacia1c {background-color: #EBF1E5;}
+.farmacia2t {background-color: #AF8382;}
+.farmaciasc {background-color: #F0E6E7;}
+.salud1t {background-color: #FFCC00;}
+.salud1c {background-color: #FFF8DD;}
+.salud2t {background-color: #71AA75;}
+.salud2c {background-color: #D4E5D5;}
+.salud3t {background-color: #A6CE39;}
+.salud3c {background-color: #E4F0C3;}
+.salud4t {background-color: #E8F3CC;}
+.salud4c {background-color: #F9FCF1;}
+
+.oftal-fac1t {background-color: #279C41;}
+.oftal-fac1c {background-color: #D1F8DA;}
+.oftal-fac2t {background-color: #82BF95;}
+.oftal-fac2c {background-color: #DEEEE0;}
+.oftal-fac3t {background-color: #7FC5AD;}
+.oftal-fac3c {background-color: #E8F2E9;}
+.oftal-fac4t {background-color: #F3D7C2;}
+.oftal-fac4c {background-color: #FCF4EB;}
+
+.cpicm-cmw1t {background-color: #013567;}
+.cpicm-cmw1c {background-color: #E3F0FA;}
+.cpicm-cmw2t {background-color: #609B95;}
+.cpicm-cmw2c {background-color: #E1F1F1;}
+.cpicm-cmw3t {background-color: #61809F;}
+.cpicm-cmw3c {background-color: #DFE6EC;}
+
+.solami1t {background-color: #6A8AC3;}
+.solami1c {background-color: #F1ECE8;}
+.solami2t {background-color: #002884;}
+.solami2c {background-color: #F1ECE8;}
+.solami3t {background-color: #9B5D76;}
+.solami3c {background-color: #F1ECE8;}
+
+.william1t {background-color: #0072BB;}
+.william1c {background-color: #D7E9F4;}
+.william2t {background-color: #5B99BE;}
+.william2c {background-color: #EAF2F7;}
+
+.insat1t {background-color: #27823C}
+.insat2t {background-color: #5BB84D}
+.insat3t {background-color: #B0EC68}
+.insatc {background-color: #F1FCE6}
+
+.saltrab1t {background-color: #003D69}
+.saltrab1c {background-color: #e5ecf0}
+.saltrab2t {background-color: #3580A3}
+
+.centromedt{background-color: #4486B4}
+.centromedc{background-color: #D6ECFB}
+
+.cruzrojat1{background-color: #e20a16}
+.cruzrojac1{background-color: #fce7ea}
+.cruzrojat2{background-color: #a9a9a9}
+.cruzrojac2{background-color: #ededed}
+.cruzrojat3{background-color: #4c70b8}
+.cruzrojac3{background-color: #e5ebf4}
+.atenciont1{background-color: #9C6D00}
+.atencionc1{background-color: #FFF7D9}
+.atenciont2{background-color: #C0A100}
+.magisteriot1{background-color: #0498F5}
+.magisterioc1{background-color: #ECf0f4}
+.magisteriot2{background-color: #00476B}
+.magisteriot3{background-color: #CEB072}
+.msgisterioc3{background-color: #FFF5e0}
+.histologiat{background-color: #a40376}
+
+.biotecnt1{background-color: #501976}
+.biotecnc1{background-color: #EEE9F0}
+.biotecnt2{background-color: #8A7097}
+
+.uvst {background-color: #528052;}
+.uvsc {background-color: #EEF1DF;}
+.bvst {background-color: #0C448F;}
+.bvsc {background-color: #D8E0ED;}
+.saludt {background-color: #01A8AE;}
+.saludc {background-color: #CCEEEF;}
+.faqt {background-color: #5B8584;}
+.faqc {background-color: #D6E0E1;}
+.faq_bordes {border: 1px #5B8584 solid;}
+
+.lavinsat {background-color: #99CCCC;}
+.lavinsac {background-color: #ECFBFB;}
+.silsat {background-color: #999999;}
+.silsac {background-color: #FFCCCC;}
+.simsat {background-color: #666699;}
+.simsac {background-color: #6699CC;}
+.asesat {background-color: #669966;}
+.asesac {background-color: #99CC99;}
+
+/*esta clase de enlaces se creo para los microformatos hCalendar*/
+          /*----------------tipos de enlace----------------------*/
+.clamedp {
+	font-family: Verdana; 
+	font-size: 7pt; 
+	font-style: normal; 
+	font-weight: bold; 
+	font-variant: normal; 
+	color: #16387C; 
+	text-decoration: none
+}
+.clamedp:hover {text-decoration: underline}
+.url {
+font-family: Arial; 
+font-size: 12px; 
+font-style: normal; 
+font-weight: bold; 
+font-variant: normal; 
+color: #16387C; 
+text-decoration: none}
+.url:hover {
+text-decoration: underline
+}
+a.enlaces, .listpost a, .enlaceslink a, .clamed, .clamedizq  {
+	font-family: Arial;
+	font-size: 12px; 
+	font-style: normal; 
+	font-weight: bold; 
+	font-variant: normal; 
+	color: #16387C ; 
+	text-decoration: none
+}
+.enlaces:hover, .listpost a:hover, .enlaceslink a:hover, .content a:hover, clamed:hover, .clamedizq:hover{
+	text-decoration: underline
+}
+a.enlacesp, .contentrss a, .contentsintitulo li a, .contentrss li a, .listlinklist li a, #cajaPost a, .contentrss #blog a {
+	color: #16387C; 
+	font-family: Arial; 
+	font-size: 11px; 
+	font-style: normal; 
+	font-weight: normal; 
+	font-variant: normal; 
+	text-decoration: none
+}
+.enlacesp:hover,.contentrss a:hover,.contentsintitulo li a:hover,.contentrss li a:hover,.listlinklist li a:hover,#cajaPost a:hover,.contentrss #blog a:hover {
+	text-decoration: underline
+}
+.brlink {
+font-family: Arial; 
+font-size: 12px; 
+font-style: normal; 
+font-weight: bold; 
+font-variant: normal; 
+color: #16387C; 
+text-decoration: none
+}
+.brlink:hover {
+text-decoration: underline
+}
+.menutop {
+background-color: Black; 
+font-family: Arial; 
+font-size: 12px;
+}
+.menutop:hover {
+background-color: #339933;
+}
+.menubot {
+background-color: #339933; 
+font-family: Arial; 
+font-size: 12px; 
+color: White; 
+text-decoration:none;
+}
+.menubot:hover {
+background-color: #AFE4AF; 
+text-decoration:underline;
+}
+.lista {
+font-family: Arial; 
+font-size: 11pt; 
+font-style: normal; 
+line-height: normal; 
+font-weight: bold; 
+font-variant: normal; 
+text-transform: none; 
+text-decoration: none; 
+color: #16387C}
+.lista:hover {
+text-decoration: underline
+}
+
+.A1normal:link, .A1normal:active, .A1normal:visited {
+COLOR:#363636;FONT-SIZE: 10px;	FONT-FAMILY: Verdana;	TEXT-DECORATION: underline }
+.A1normal:hover {
+COLOR: #659A66;	TEXT-DECORATION: none; }
+
+.A2normal:link, .A2normal:active, .A2normal:visited{
+COLOR: #363636;	FONT-SIZE: 12px;	FONT-FAMILY: Verdana;	TEXT-DECORATION: underline }
+.A2normal:hover{
+COLOR: #659A66;	TEXT-DECORATION: none; }
+
+.A3normal:link          {COLOR: #363636;	FONT-SIZE: 14px;	FONT-FAMILY: Verdana;	TEXT-DECORATION: underline }
+.A3normal:active        {COLOR: #363636;	FONT-SIZE: 14px;	FONT-FAMILY: Verdana;	TEXT-DECORATION: underline }
+.A3normal:visited       {COLOR: #363636;	FONT-SIZE: 14px;	FONT-FAMILY: Verdana;	TEXT-DECORATION: underline }
+.A3normal:hover         {COLOR: #659A66;TEXT-DECORATION: none; }
+
+.A0bold:link          {	COLOR: #363636;	FONT-SIZE: 9px;	FONT-WEIGHT: bold; FONT-FAMILY: Verdana;	TEXT-DECORATION: underline }
+.A0bold:active        {	COLOR: #363636;	FONT-SIZE: 9px;	FONT-WEIGHT: bold; FONT-FAMILY: Verdana;	TEXT-DECORATION: underline }
+.A0bold:visited       {	COLOR: #363636;	FONT-SIZE: 9px;	FONT-WEIGHT: bold; FONT-FAMILY: Verdana;	TEXT-DECORATION: underline }
+.A0bold:hover         {	COLOR: #659A66; TEXT-DECORATION: none; }
+
+.A1bold:link          {	COLOR: #363636;	FONT-SIZE: 10px; FONT-WEIGHT: bold;	FONT-FAMILY: Verdana;	TEXT-DECORATION: underline }
+.A1bold:active        {	COLOR: #363636;	FONT-SIZE: 10px; FONT-WEIGHT: bold;	FONT-FAMILY: Verdana;	TEXT-DECORATION: underline }
+.A1bold:visited       {	COLOR: #363636;	FONT-SIZE: 10px; FONT-WEIGHT: bold;	FONT-FAMILY: Verdana;	TEXT-DECORATION: underline }
+.A1bold:hover         {	COLOR: #659A66;TEXT-DECORATION: none; }
+
+.A2bold:link          {	COLOR: #363636;	FONT-SIZE: 12px; FONT-WEIGHT: bold;	FONT-FAMILY: Verdana;	TEXT-DECORATION: underline }
+.A2bold:active        {	COLOR: #363636;	FONT-SIZE: 12px; FONT-WEIGHT: bold;	FONT-FAMILY: Verdana;	TEXT-DECORATION: underline }
+.A2bold:visited       {	COLOR: #363636;	FONT-SIZE: 12px; FONT-WEIGHT: bold;	FONT-FAMILY: Verdana;	TEXT-DECORATION: underline }
+.A2bold:hover         {	COLOR: #659A66;TEXT-DECORATION: none; }
+
+.A3bold:link          { COLOR: #363636;	FONT-SIZE: 14px; FONT-WEIGHT: bold;	FONT-FAMILY: Verdana;	TEXT-DECORATION: underline }
+.A3bold:active        {	COLOR: #363636;	FONT-SIZE: 14px; FONT-WEIGHT: bold;	FONT-FAMILY: Verdana;	TEXT-DECORATION: underline }
+.A3bold:visited       {	COLOR: #363636;	FONT-SIZE: 14px; FONT-WEIGHT: bold;	FONT-FAMILY: Verdana;	TEXT-DECORATION: underline }
+.A3bold:hover         {	COLOR: #659A66;TEXT-DECORATION: none; }
+/*---- footer 8:09/24/11-----*/
+#contF{border-top: 3px #bebebe solid;width: 100%;position:relative}
+#f1,#f2  {
+    color: #7B7B7B;
+    font-family: Verdana;
+    font-size: 10px;
+    height: auto;
+    margin: 0;
+    padding: 1%;
+    text-align: left;
+    width: 47%;
+}
+#f1 {
+	float:left;
+}
+#f2  {
+	float:right;
+}
+#copyright {
+	border-bottom: 1px #bebebe solid;
+    border-top: 1px #bebebe solid;
+    color: #7B7B7B;
+	float:left;
+    font-family: Verdana;
+    font-size: 10px;
+    height: auto;
+    margin: 0;
+    padding: 1%;
+    text-align: center;
+    width: 98%;
+}
+/*------ segundas paginas-*/
+table#verBlog .columna3c tr{
+	padding-top: 2%
+}
+/*------ para IE-*/
+#blog li div div{
+   _text-indent: 0px;/*para eliminar la sangria IE6*/
+   #text-indent: 0px;/*para eliminar la sangria IE7*/
+}
+#cajaPost ul{
+   _padding: 5px 8px;/*para eliminar la sangria IE6*/
+   #padding: 5px 8px;/*para eliminar la sangria IE7*/
+}
+#cajaPost ul li a{
+   _text-indent: -17px;/*para eliminar la sangria IE6*/
+   #text-indent: -17px;/*para eliminar la sangria IE7*/
+}
+div#caja2 .contentrss ul li, div#caja2 .contentrss ul li a{
+   _text-indent: 0px;/*para eliminar la sangria IE6 en caja centro*/
+   #text-indent: 0px;/*para eliminar la sangria IE7 en caja centro*/
+}
+div#caja2 div.postcontent li {
+   _text-indent: -0px;/*para eliminar la sangria IE6*/
+   #text-indent: -0px;/*para eliminar la sangria IE7*/
+}
+/******* IE **************/
+div#caja1 .postcontent ul,
+div#caja3 .postcontent ul {
+ 	_margin:0;
+	#margin:0;
+ }
+div#caja1 .postcontent ul p,
+div#caja1 .postcontent ul li p,
+div#caja1 .postcontent div.content,
+div#caja1 .postcontent div.content p,
+div#caja1 div.contentrss ul li,
+div#caja1 div.contentrss p,
+div#caja3 .postcontent ul p,
+div#caja3 .postcontent ul li p,
+div#caja3 .postcontent div.content,
+div#caja3 .postcontent div.content p,
+div#caja3 div.contentrss ul li,
+div#caja3 div.contentrss p {
+ 	_margin:0;
+	#margin:0;
+	_padding:2px!important;
+	#padding:2px!important;
+	_line-height: normal;
+	#line-height: normal;
+ }
+div#caja2 div#listcontent p,div#caja2 div#listcontent a {
+	text-indent:0;
+	_text-indent:0;
+	#text-indent:0;
+	_margin:0;
+	#margin:0;
+ }
+ div#caja2 ul#blog,div#caja2 ul#blog li {
+ 	_padding-top:0;
+	#padding-top:0;}
+ div#caja2 .content,div#caja2 .contentrss{
+	_margin:2px 5px;
+	#margin:2px 5px;}
+ div#listfechaautor{
+ 	text-indent:0;
+	_text-indent: 2px;/*para eliminar la sangria IE6 en caja centro*/
+	#text-indent: 2px;/*para eliminar la sangria IE7 en caja centro*/}
+div#caja1 ul li a, div#caja3 ul li a, div#caja3 ul li div a.enlaces {
+	text-indent:0px;
+	_text-indent:-15px;
+	#text-indent:-15px;}
+div.contentrss li{
+	text-indent:0px;
+	_text-indent:-15px;
+	#text-indent:-15px;}
+div#caja2 #listcontent a.enlacevermas{
+_margin-top:0px;
+#margin-top:-10px;
+_margin-bottom:0px;
+#margin-bottom:-25px;}
+ div#caja2 div.content, div#caja2 div.contentrss{
+  	font-family: Arial; 
+ 	font-size: 12px;}
+/*div#caja2 #listcontent a.enlacevermas{margin-top:-15px;margin-bottom:-15px;}
+div#caja2 #listcontent a.enlacevermas{margin-top:-15px;margin-bottom:-8%;}*/
+
+/*obligatorios*/
+div#listcontent img.aligncenter, div.postcontent img.aligncenter {margin: 0 auto;display: block;}
+div#caja2 p,div#caja1 p,div#caja3 p{text-align: left!important;}
+div .masrss a, div a.enlacevermas, div.listlink .enlacesp,div#listcontent a.enlacevermas{color:#16387c;display:block;font-family:Verdana!important;font-size:10px!important;font-weight:normal!important;margin:0px;text-align:right;text-transform:capitalize!important;}
+tr.serviciost_head{ background-color: #8870A8; color:#333!important;clear: both}
+
+/*fin*/
