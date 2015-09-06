@@ -2,9 +2,9 @@ parameters:
     database_driver: pdo_mysql
     database_host: 127.0.0.1
     database_port: null
-    database_name: DBuser
-    database_user: root
-    database_password: null
+    database_name: symfony-auth
+    database_user: homestead
+    database_password: secret
     mailer_transport: smtp
     mailer_host: 127.0.0.1
     mailer_user: null
